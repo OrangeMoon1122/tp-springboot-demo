@@ -5,10 +5,10 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     initialization-mode: always
     continue-on-error: true
-    schema:
-      - "classpath:db/schema.sql"
-    data:
-      - "classpath:db/data.sql"
+#    schema:
+#      - "classpath:db/schema.sql"
+#    data:
+#      - "classpath:db/data.sql"
     hikari:
       minimum-idle: 5
       connection-test-query: SELECT 1 FROM DUAL
@@ -27,7 +27,7 @@ logging:
 
 mybatis:
   configuration:
-    # �»���ת�շ�
+#   驼峰
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mappers/*.xml
   type-aliases-package: com.example.tkmybatispagehelp.entity
